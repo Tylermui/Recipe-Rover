@@ -31,6 +31,7 @@ async function fetchAPI() {
 function populateContainer(results) {
   let recipeItem = "";
   results.map((result) => {
+    //let score = calculateScore(result)
     recipeItem += `
     <div class="recipeItem col-md-3 mx-5">
         <img src="${result.recipe.image}" alt="">
@@ -40,9 +41,22 @@ function populateContainer(results) {
         </div>
         <p class="Item-data p-1">
             calories: ${result.recipe.calories.toFixed(0)}
+            score: 
         </p>
     </div>`;
   });
 
   $(".api-container").html(recipeItem);
+}
+
+function calculateScore(result){
+  //let carbs = ${result.recipe.totalNutrients.CHOCDF.quantity}
+  //let fats = ${result.recipe.totalNutrients.FAT.quantity}
+  //let proteins = ${result.recipe.totalNutrients.PROCNT.quantity}
+  //var score = 0;
+
+  //add some weights per nutrient
+
+
+  //return score
 }
