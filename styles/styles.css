@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&family=Montserrat:wght@100;400&family=Raleway&family=Saira&family=Yanone+Kaffeesatz&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,7 +7,8 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f7f7f7;
-    font-family: Arial, sans-serif;
+    font-family: Yanone Kaffeesatz;
+    font-size: 18px;
 }
 
 #title{
@@ -46,9 +49,40 @@ body {
 
 .api-container {
     margin-top: 20px;
-    width: 80%;
+    width: 84%;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+img{
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.recipeItem{
+    margin: 10px;
+    background-color: lightslategrey;
+    border-radius: 10px;
+    padding: 4%;
+}
+
+.recipeItem .flex-container {
+
+}
+
+.viewButton{
+    text-decoration: none;
+    text-align: center;
+    width: 130px;
+    padding: 10px;
+    background-color: #404041;
+    color: whitesmoke;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 4px;
+    align-self: flex-start;
 }
