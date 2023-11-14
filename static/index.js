@@ -34,7 +34,7 @@ function populateContainer(results) {
     //let score = calculateScore(result)
     recipeItem += `
     <div class="recipeItem col-md-3 mx-5">
-        <img src="${result.recipe.image}" alt="">
+        <img src="${result.recipe.image}" alt="" width=50%>
         <div class="flex-container">
             <h2 class="title">${result.recipe.label}</h2>
             <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
