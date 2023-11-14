@@ -61,6 +61,10 @@ body {
 img{
     object-fit: cover;
     border-radius: 10px;
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .recipeItem{
