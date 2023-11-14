@@ -40,7 +40,7 @@ function populateContainer(results) {
             <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
         </div>
         <p class="Item-data p-1">
-            calories: ${result.recipe.calories.toFixed(0)}
+            calories: ${result.recipe.calories.toFixed(0)} <br>
             score: 
         </p>
     </div>`;
