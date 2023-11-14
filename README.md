@@ -13,5 +13,5 @@ Inside the file, name two variables:
 ```plaintext
 export const API_ID = //your_API_id
 export const API_KEY = //your_api_key
-
+```
 This will allow the index.js file to import the key and id from the API and allow for proper searching.
