@@ -75,6 +75,7 @@ img{
     background-color: lightslategrey;
     border-radius: 10px;
     padding: 4%;
+    max-width: 90%;
 }
 
 .recipeItem .flex-container {
