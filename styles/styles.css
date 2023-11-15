@@ -76,7 +76,7 @@ img{
 }
 
 .recipeItem{
-    margin: 10px;
+    margin: 10px 10px 10px;
     background-color: lightslategrey;
     border-radius: 10px;
     padding: 4%;
