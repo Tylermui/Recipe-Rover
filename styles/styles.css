@@ -8,12 +8,17 @@ body {
     margin: 0;
     background-color: #f7f7f7;
     font-family: Yanone Kaffeesatz;
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: clamp(0.7rem, 0.489rem + 1.05vw, 1.2rem);
     font-weight: bold;
 }
 
 #title{
-    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #8E2157;
+    color: white;
+    width: 100%;
 }
 
 .search-container {
@@ -71,7 +76,7 @@ img{
 }
 
 .recipeItem{
-    margin: 10px;
+    margin: 10px 10px 10px;
     background-color: lightslategrey;
     border-radius: 10px;
     padding: 4%;
