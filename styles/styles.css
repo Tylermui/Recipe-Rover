@@ -8,6 +8,7 @@ body {
     margin: 0;
     background-color: #f7f7f7;
     font-family: Yanone Kaffeesatz;
+    /* font-family: Jotia,Verdana,Geneva,sans-serif; */
     /* font-family: var(--jotia); */
     /* font-family: Jotia; */
     /* font-size: 20px; */
@@ -20,6 +21,7 @@ body {
     padding-bottom: 10px;
     margin-bottom: 0px;
     background-color: #8E2157;
+    /* background-color: #5C0391; */
     color: whitesmoke;
     text-align: center;
     width: 100%;
@@ -37,7 +39,7 @@ body {
     background-color: #ffffff;
     padding: 5px;
     margin: 10px 30px 10px;
-    border-radius: 4px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -59,10 +61,11 @@ body {
     width: auto;
     background-color: #4caf50;
     color: #ffffff;
-    padding: 0px 10px 20px;
+    padding: 0px 10px 5px;
     border: none;
     border-radius: 3px;
-    cursor: text;
+    cursor: pointer;
+    /* font-size: 0.5rem; */
 }
 
 .search-button:hover {
@@ -117,4 +120,28 @@ img{
     margin-top: 20px;
     border-radius: 4px;
     align-self: flex-start;
+}
+footer{
+    width: 100%;
+}
+.footer-wave{
+    width:auto;
+    overflow: hidden;
+    /* background: linear-gradient(to bottom,#7e184e,#520c30 100%);
+    bottom: 0;
+    width: 100%;
+    background-repeat: no-repeat; */
+}
+.footer-tag{
+    width: 100%;
+    font-weight: lighter;
+    font-style: italic;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0px 10px;
+    text-align: center;
+    color: whitesmoke;
+    background: linear-gradient(to bottom,#7e184e,#520c30 100%);
+    bottom: 0;
+    width: 100%;
+    background-repeat: no-repeat;
 }
