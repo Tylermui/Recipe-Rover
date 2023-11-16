@@ -8,6 +8,8 @@ body {
     margin: 0;
     background-color: #f7f7f7;
     font-family: Yanone Kaffeesatz;
+    /* font-family: var(--jotia); */
+    /* font-family: Jotia; */
     /* font-size: 20px; */
     font-size: clamp(0.7rem, 0.489rem + 1.05vw, 1.2rem);
     font-weight: bold;
@@ -16,19 +18,29 @@ body {
 #title{
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 0px;
     background-color: #8E2157;
     color: whitesmoke;
     text-align: center;
     width: 100%;
 }
-
+.search{
+    width: 100%;
+    /* padding: 0px 0px 0px; */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: lightblue;
+}
 .search-container {
+    /* width: 30%; */
+    height: 50%;
     background-color: #ffffff;
     padding: 20px;
-    margin-top: 30px;
+    margin: 10px 30px 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -55,8 +67,8 @@ body {
 }
 
 .api-container {
-    margin-top: 20px;
-    width: 84%;
+    margin-top: 0px;
+    width: 100%;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
