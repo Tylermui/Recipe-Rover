@@ -35,9 +35,9 @@ body {
     /* width: 30%; */
     height: 50%;
     background-color: #ffffff;
-    /* padding: 20px; */
+    padding: 5px;
     margin: 10px 30px 10px;
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -45,22 +45,24 @@ body {
 
 .search-input {
     /* flex: 1; */
-    height: 90%;
-    width: 90%;
-    padding: 10px;
+    height: 100%;
+    width: 100%;
+    /* padding: 1rem; */
     border: none;
     outline: none;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: clamp(0.7rem, 0.489rem + 1.05vw, 1.2rem);
 }
 
 .search-button {
+    height: 100%;
+    width: auto;
     background-color: #4caf50;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 0px 10px 20px;
     border: none;
-    border-radius: 4px;
-    margin-left: 10px;
-    cursor: pointer;
+    border-radius: 3px;
+    cursor: text;
 }
 
 .search-button:hover {
