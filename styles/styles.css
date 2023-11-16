@@ -11,6 +11,7 @@ body {
     /* font-size: 20px; */
     font-size: clamp(0.7rem, 0.489rem + 1.05vw, 1.2rem);
     font-weight: bold;
+    font-size: 20px;
 }
 
 #title{
