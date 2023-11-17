@@ -53,7 +53,7 @@ body {
     margin-left: 10px;
     border: none;
     outline: none;
-    font-size: clamp(0.5rem, 0.489rem + 1.05vw, 1.2rem); */
+    font-size: clamp(0.5rem, 0.489rem + 1.05vw, 1.2rem); 
 }
 
 .search-button {
@@ -65,12 +65,12 @@ body {
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.1);
     transition: box-shadow 0.6s, transform 0.5s; 
 }
 .search-button:hover{
     background-color: #45a049;
-    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.3);
     transition: box-shadow 0.5s;
 }
 
@@ -107,9 +107,9 @@ img{
     max-width: 90%;
 }
 
-.recipeItem .flex-container {
+/* .recipeItem .flex-container {
 
-}
+} */
 
 .viewButton{
     text-decoration: none;
