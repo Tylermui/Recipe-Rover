@@ -1,66 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&family=Montserrat:wght@100;400&family=Raleway&family=Saira&family=Yanone+Kaffeesatz&display=swap');
 
 body {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #f7f7f7;
+    /* font-family: Century Gothic; */
     font-family: Yanone Kaffeesatz;
+    /* font-family: Jotia,Verdana,Geneva,sans-serif; */
+    /* font-family: var(--jotia); */
+    /* font-family: Jotia; */
     /* font-size: 20px; */
     font-size: clamp(0.7rem, 0.489rem + 1.05vw, 1.2rem);
     font-weight: bold;
+    color: #5c0931;
 }
 
 #title{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #8E2157;
-    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    /* background-color: #8E2157; */
+    background: linear-gradient(to bottom,#520c30, #7e184e 100%);
+    /* background-color: #5C0391; */
+    color: whitesmoke;
+    text-align: left;
+    padding-left: 20px;
     width: 100%;
+    height: 80px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
-
+.search{
+    width: 30%;
+}
 .search-container {
+    /* width: auto; */
+    min-width: 150px;
     background-color: #ffffff;
-    padding: 20px;
-    margin-top: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: -25px 30px 10px;
+    border-radius: 3px;
+    box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
 }
 
 .search-input {
-    flex: 1;
-    padding: 10px;
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: clamp(0.5rem, 0.489rem + 1.05vw, 1.2rem); 
 }
 
 .search-button {
-    background-color: #4caf50;
+    height: auto;
+    width: auto;
+    background-color: #FFA903;
     color: #ffffff;
-    padding: 10px 20px;
+    margin: 5px 5px 5px;
     border: none;
-    border-radius: 4px;
-    margin-left: 10px;
+    border-radius: 2px;
     cursor: pointer;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.1);
+    transition: box-shadow 0.6s, transform 0.5s; 
 }
-
-.search-button:hover {
+.search-button:hover{
     background-color: #45a049;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.3);
+    transition: box-shadow 0.5s;
 }
 
 .api-container {
-    margin-top: 20px;
-    width: 84%;
+    margin-top: 0px;
+    width: 100%;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* background-color: #ffffff; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 img{
@@ -77,7 +100,8 @@ img{
 
 .recipeItem{
     margin: 10px 10px 10px;
-    background-color: lightslategrey;
+    /* background-color: lightslategrey; */
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 4%;
     max-width: 90%;
@@ -95,4 +119,28 @@ img{
     margin-top: 20px;
     border-radius: 4px;
     align-self: flex-start;
+}
+footer{
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.footer-wave .st0 .st1{
+    width:auto;
+    overflow: hidden;
+    background: linear-gradient(to bottom,#7e184e,#520c30 100%);
+}
+.footer-tag{
+    width: 100%;
+    height: 50px;
+    font-weight: lighter;
+    font-style: italic;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: -2px;
+    padding: 10px 0px 10px;
+    text-align: center;
+    color: whitesmoke;
+    background: linear-gradient(to bottom,#7e184e,#520c30 100%);
+    bottom: 0;
+    width: 100%;
+    background-repeat: no-repeat;
 }
