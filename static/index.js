@@ -18,6 +18,12 @@ $(document).ready(function () {
       // For example, you can trigger an AJAX request to fetch and display the recipe data
       // based on the input in the 'foodInput' field.
   });
+  $("#searchButton").bind('keypress', function (event) {
+    let val = $("#searchButton").val();
+    if (event.keyCode == '13') {
+        power2('getDoctorList?pageNum=' + val);
+    }
+  })
 });
 
 async function fetchAPI() {
@@ -40,7 +46,7 @@ function populateContainer(results) {
             <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
         </div>
         <p class="Item-data p-1">
-            calories: ${result.recipe.calories.toFixed(0)}
+            calories: ${result.recipe.calories.toFixed(0)} <br>
             score: 
         </p>
     </div>`;
