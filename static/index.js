@@ -59,10 +59,33 @@ function calculateScore(result){
   //let carbs = ${result.recipe.totalNutrients.CHOCDF.quantity}
   //let fats = ${result.recipe.totalNutrients.FAT.quantity}
   //let proteins = ${result.recipe.totalNutrients.PROCNT.quantity}
+
+  //UPDATE THESE WITH PROPER VAR NAMES WHEN POSSIBLE
+
+  //let fats = ${result.recipe.totalNutrients.FAT.quantity}
+  //let fats = ${result.recipe.totalNutrients.FAT.quantity}
+  //let fats = ${result.recipe.totalNutrients.FAT.quantity}
+  //let fats = ${result.recipe.totalNutrients.FAT.quantity}
+  //let fats = ${result.recipe.totalNutrients.FAT.quantity}
+  //let fats = ${result.recipe.totalNutrients.FAT.quantity}
+  //let fats = ${result.recipe.totalNutrients.FAT.quantity}
+
   //var score = 0;
 
-  //add some weights per nutrient
 
+  /**scores 
+  let carb_score = (carbs/275)*10  g
+  let fat_score = (fats/78)*10  g
+  let protein_score = (protein/50)*10  g
+  let sugar_score = (sugars/50)*10  g
+  let calcium_score = (calcium/1300)*10  mg
+  let cholesterol_score = (cholesterol/300)*10  mg
+  let fiber_score = (fiber/28)*10  g
+  let potassium_score = (potassium/4700)*10  mg
+  let saturated_fat+score = (saturated_fat/20)*10  g
+  let sodium_score = (sodium/2300)*10  mg
 
-  //return score
+  let score = carb_score + fat_score + protein_score + sugar_score + calcium_score + cholesterol_score + fiber_score + potassium_score + saturated_fat+score + sodium_score
+
+  return score*/
 }
