@@ -1,37 +1,30 @@
 // JavaScript code for handling API requests and displaying data will go here????
 import {API_ID} from './config.js'
 import {API_KEY} from './config.js'
+// const API_ID = proccess.env.API_ID
+// const API_KEY = proccess.env.API_KEY
+
+
 var query = "";
 
 $(document).ready(function () {
   $('#searchButton').click(function (event) {
       // Prevent the default form submission
       event.preventDefault();
-      
       //grabbing the query from the user
       query = document.getElementById('foodInput').value;
       console.log(query)
       //where we are going to parse the api information
       fetchAPI()
-
-      // Add your logic for handling the form submission here
-      // For example, you can trigger an AJAX request to fetch and display the recipe data
-      // based on the input in the 'foodInput' field.
   });
-  $("#searchButton").bind('keypress', function (event) {
-    let val = $("#searchButton").val();
-    if (event.keyCode == '13') {
-        power2('getDoctorList?pageNum=' + val);
-    }
-  })
 });
 
 async function fetchAPI() {
+  console.log(getData())
   let apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${API_ID}&app_key=${API_KEY}&to=20`;
   const response = await fetch(apiUrl);
   const data = await response.json();
   populateContainer(data.hits);
-  console.log(data);
 }
 
 function populateContainer(results) {
@@ -85,4 +78,25 @@ function calculateScore(result){
   score = carb_score + fat_score + protein_score + sugar_score + calcium_score + cholesterol_score + fiber_score + potassium_score + saturated_fat_score + sodium_score
   score = score/servings
   return score
+}
+
+function getData() {
+  const url = 'https://recipe-rover.pages.dev/form';
+
+  return fetch(url, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+    },
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error('Error getting data:', error);
+      throw error;
+    });
 }
