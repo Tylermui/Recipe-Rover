@@ -18,16 +18,7 @@ $(document).ready(function () {
       //where we are going to parse the api information
       fetchAPI()
 
-      // Add your logic for handling the form submission here
-      // For example, you can trigger an AJAX request to fetch and display the recipe data
-      // based on the input in the 'foodInput' field.
   });
-  $("#searchButton").bind('keypress', function (event) {
-    let val = $("#searchButton").val();
-    if (event.keyCode == '13') {
-        power2('getDoctorList?pageNum=' + val);
-    }
-  })
 });
 
 async function fetchAPI() {
@@ -35,7 +26,6 @@ async function fetchAPI() {
   const response = await fetch(apiUrl);
   const data = await response.json();
   populateContainer(data.hits);
-  console.log(data);
 }
 
 function populateContainer(results) {
