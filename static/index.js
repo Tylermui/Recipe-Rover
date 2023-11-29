@@ -19,7 +19,7 @@ $(document).ready(function () {
 });
 
 async function fetchAPI() {
-  results = await getData()
+  var results = await getData()
   var API_ID = results.results[0].id
   var API_KEY = results.results[0].key
   console.log(API_KEY, API_ID)
