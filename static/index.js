@@ -1,6 +1,6 @@
 // JavaScript code for handling API requests and displaying data will go here????
-import {API_ID} from './config.js'
-import {API_KEY} from './config.js'
+//import {API_ID} from './config.js'
+//import {API_KEY} from './config.js'
 // const API_ID = proccess.env.API_ID
 // const API_KEY = proccess.env.API_KEY
 
