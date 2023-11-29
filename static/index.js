@@ -19,7 +19,10 @@ $(document).ready(function () {
 });
 
 async function fetchAPI() {
-  console.log(getData())
+  results = await getData()
+  var API_ID = results.results[0].id
+  var API_KEY = results.results[0].key
+  console.log(API_KEY, API_ID)
   let apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${API_ID}&app_key=${API_KEY}&to=20`;
   const response = await fetch(apiUrl);
   const data = await response.json();
