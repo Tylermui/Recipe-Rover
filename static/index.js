@@ -8,14 +8,13 @@ import {API_KEY} from './config.js'
 var query = "";
 
 $(document).ready(function () {
-  $('#searchButton').click(function (event) {
+  $('#searchButton').click(async function() {
       // Prevent the default form submission
-      event.preventDefault();
       //grabbing the query from the user
       query = document.getElementById('foodInput').value;
       console.log(query)
       //where we are going to parse the api information
-      fetchAPI()
+      await fetchAPI()
   });
 });
 
