@@ -5,22 +5,21 @@ var query = "";
 
 $(document).ready(function () {
   $('#searchButton').click(async function() {
-      // Prevent the default form submission
-
-      //grabbing the query from the user
+      //Grabbing the query from the user
       query = document.getElementById('foodInput').value;
-      //where we are going to parse the api information
+      //Where we are going to parse the api information
       await fetchAPI()
   });
 });
 
 async function fetchAPI() {
-  //calling into the db to grab the information
+  //Calling into the db to grab the information
   var results = await getData()
-  //get the ID from the db
+  //Get the ID from the db
   var API_ID = results.results[0].id
-  //get the key from the db
+  //Get the key from the db
   var API_KEY = results.results[0].key
+  
   let apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${API_ID}&app_key=${API_KEY}&to=20`;
   const response = await fetch(apiUrl);
   const data = await response.json();
@@ -80,7 +79,7 @@ function calculateScore(result){
   return score
 }
 
-//fetching the data from the cloudflare D1 Database
+//Fetching the data from the Cloudflare D1 Database
 function getData() {
   const url = 'https://recipe-rover.pages.dev/form';
 
