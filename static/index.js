@@ -14,8 +14,8 @@ $(document).ready(function () {
   $(document).on("click",".menu-icon",function(){
       if(status=="boxStatus"){
         status=="barStatus";
-        $aNode=$(".box").find("div").find("a").html();
-        $(".box").append($aNode);
+        // $aNode=$(".box").find("div").find("a").html();
+        $(".box").append($(".box").find("div").find("a"));
         $(".box").find("div").find("a").remove();
       }
       else{
