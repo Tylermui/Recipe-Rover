@@ -49,10 +49,9 @@ body {
     left: 50%;
     margin: 0 0 0 -1000px;
 }
-.wave-decoration.is-bottom {
-    top: auto;
-    bottom: 0;
-}
+/* .wave-decoration.is-bottom {
+ 
+} */
 .search{
     width: 30%;
 }
@@ -143,6 +142,9 @@ img{
 footer{
     width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    top: auto;
+    position: absolute;
 }
 .footer-wave .st0 .st1{
     width:auto;

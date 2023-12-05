@@ -31,7 +31,7 @@ function populateContainer(results) {
   results.map((result) => {
     calculateScore(result)
     recipeItem += `
-    <div class="recipeItem col-md-3 mx-5">
+    <div class="recipeItem col-md-3 mx-5" id="box">
         <img src="${result.recipe.image}" alt="">
         <div class="flex-container">
             <h2 class="title">${result.recipe.label}</h2>
