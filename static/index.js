@@ -11,7 +11,10 @@ $(document).ready(function () {
       await fetchAPI()
   });
   $(document).on("click",".menu-icon",function(){
-      $("#box").toggleClass("col-md-3 mx-5");
+      $(".box").toggleClass("recipeItem col-md-3 mx-5");
+      $(".box").children().each(function(){
+        $(this).toggleClass("blockInline");
+      });
   });
 });
 
@@ -34,7 +37,7 @@ function populateContainer(results) {
   results.map((result) => {
     calculateScore(result)
     recipeItem += `
-    <div class="recipeItem col-md-3 mx-5" id="box">
+    <div class="recipeItem col-md-3 mx-5 box">
         <img src="${result.recipe.image}" alt="">
         <div class="flex-container">
             <h2 class="title">${result.recipe.label}</h2>
