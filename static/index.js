@@ -11,8 +11,7 @@ $(document).ready(function () {
       await fetchAPI()
   });
   $(document).on("click",".menu-icon",function(){
-      $("#container").empty();
-
+      $("#box").toggleClass("col-md-3 mx-5");
   });
 });
 
