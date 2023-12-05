@@ -26,7 +26,9 @@ $(document).ready(function () {
         $(this).toggleClass("blockInline");
       });
       $(".box").find("img").toggleClass("imgBar");
-      $(".box").find("a").toggleClass("aBar");
+      $(".box").find("#h2").toggleClass("h2Bar");
+      $(".box").find("#p").toggleClass("pBar");
+      $(".box").find("#a").toggleClass("aBar");
   });
 });
 
@@ -51,15 +53,19 @@ function populateContainer(results) {
     recipeItem += `
     <div class="recipeItem col-md-3 mx-5 box">
         <img src="${result.recipe.image}" alt="">
-        <div class="flex-container">
+        <div class="flex-container" id="h2">
             <h2 class="title">${result.recipe.label}</h2>
         </div>
         <hr>
-        <p class="Item-data p-1">
-            calories: ${result.recipe.calories.toFixed(0)} <br>
-            score: ${calculateScore(result).toFixed(0)}
-        </p>
-        <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
+        <div id="p">
+          <p class="Item-data p-1">
+              calories: ${result.recipe.calories.toFixed(0)} <br>
+              score: ${calculateScore(result).toFixed(0)}
+          </p>
+        </div>
+        <div id="a">
+          <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
+        </div>
     </div>`;
   });
 
