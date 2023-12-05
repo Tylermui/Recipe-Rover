@@ -10,16 +10,16 @@ $(document).ready(function () {
       //Where we are going to parse the api information
       await fetchAPI()
   });
-  $status="boxStatus";
+  var status="boxStatus";
   $(document).on("click",".menu-icon",function(){
-      if($status=="boxStatus"){
-        $status=="barStatus";
+      if(status=="boxStatus"){
+        status=="barStatus";
         $aNode=$(".box").find("div").find("a");
         $(".box").append($aNode);
         $(".box").find("div").find("a").remove();
       }
       else{
-        $status=="boxStatus";
+        status=="boxStatus";
         $aNode=$(".box").find("a").removeClass("blockInline");
         $(".box").find("div").append($aNode);
         $(".box").find("a").remove();
