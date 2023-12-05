@@ -1,6 +1,6 @@
 //These imports are for running it locally
-import {API_ID} from './config.js'
-import {API_KEY} from './config.js'
+// import {API_ID} from './config.js'
+// import {API_KEY} from './config.js'
 var query = "";
 
 $(document).ready(function () {
