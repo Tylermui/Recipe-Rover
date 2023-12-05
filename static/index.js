@@ -66,8 +66,8 @@ function populateContainer(results) {
 //     `;
 //   });
 
-  $(".api-container").html(recipeItem);
-}
+//   $(".api-container").html(recipeItem);
+// }
 
 function calculateScore(result){
   let carbs = result.recipe.totalNutrients.CHOCDF.quantity
