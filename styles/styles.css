@@ -125,6 +125,12 @@ img{
     padding: 4%;
     max-width: 90%;
 }
+.recipeItemBar{
+
+}
+.blockInline{
+    display: inline-block;
+}
 .menu-icon{
     width: 0.9rem;
     height: 0.45rem;
