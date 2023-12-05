@@ -31,7 +31,7 @@ function populateContainer(results) {
   results.map((result) => {
     calculateScore(result)
     recipeItem += `
-    <div class="recipeItem col-md-3 mx-5">
+    <div class="recipeItem col-md-3 mx-5" id="box">
         <img src="${result.recipe.image}" alt="">
         <div class="flex-container">
             <h2 class="title">${result.recipe.label}</h2>
@@ -42,6 +42,28 @@ function populateContainer(results) {
             score: ${calculateScore(result).toFixed(0)}
         </p>
     </div>`;
+  });
+
+  $(".api-container").html(recipeItem);
+}
+
+function populateContainer2(results) {
+  let recipeItem = "";
+  results.map((result) => {
+    calculateScore(result)
+    recipeItem += `
+    <div class="recipeItem col-md-3 mx-5" id="bar">
+        <img src="${result.recipe.image}" alt="">
+        <div class="flex-container">
+            <h2 class="title">${result.recipe.label}</h2>
+            <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
+        </div>
+        <p class="Item-data p-1">
+            calories: ${result.recipe.calories.toFixed(0)} <br>
+            score: ${calculateScore(result).toFixed(0)}
+        </p>
+    </div>
+    `;
   });
 
   $(".api-container").html(recipeItem);
