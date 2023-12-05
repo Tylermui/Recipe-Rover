@@ -125,7 +125,16 @@ img{
     padding: 4%;
     max-width: 90%;
 }
-
+.menu-icon{
+    width: 0.9rem;
+    height: 0.45rem;
+    border-top: 0.1rem solid #ffffff;
+    border-bottom:0.1rem solid #ffffff;
+    background-color: #ffffff;
+    padding: 0.1rem 0;
+    margin-top:0.9rem;
+    background-clip:content-box;
+ }
 .viewButton{
     text-decoration: none;
     text-align: center;
