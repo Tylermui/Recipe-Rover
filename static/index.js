@@ -10,12 +10,27 @@ $(document).ready(function () {
       //Where we are going to parse the api information
       await fetchAPI()
   });
+  $status="boxStatus";
   $(document).on("click",".menu-icon",function(){
-      $(".box").toggleClass("recipeItem col-md-3 mx-5");
+      if($status=="boxStatus"){
+        $status=="barStatus";
+        $aNode=$(".box").find("div").find("a");
+        $(".box").append($aNode);
+        $(".box").find("div").find("a").remove();
+      }
+      else{
+        $status=="boxStatus";
+        $aNode=$(".box").find("a").removeClass("blockInline");
+        $(".box").find("div").append($aNode);
+        $(".box").find("a").remove();
+      } 
+
+      $(".box").toggleClass("recipeItem col-md-3 mx-5 recipeItemBar");
       $(".box").children().each(function(){
         $(this).toggleClass("blockInline");
       });
       $(".box").find("img").toggleClass("imgBar");
+      $(".box").find("a").toggleClass("aBar");
   });
 });
 
