@@ -125,7 +125,16 @@ img{
     padding: 4%;
     max-width: 90%;
 }
-
+.menu-icon{
+    width: 0.9rem;
+    height: 0.45rem;
+    border-top: 0.1rem solid #520c30;
+    border-bottom:0.1rem solid #520c30;
+    background-color: #520c30;
+    padding: 0.1rem 0;
+    margin-top:0.9rem;
+    background-clip:content-box;
+ }
 .viewButton{
     text-decoration: none;
     text-align: center;
@@ -142,9 +151,8 @@ img{
 footer{
     width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
     bottom: 0;
-    top: auto;
-    position: absolute;
 }
 .footer-wave .st0 .st1{
     width:auto;
