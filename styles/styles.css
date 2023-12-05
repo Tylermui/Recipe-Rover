@@ -60,7 +60,7 @@ body {
     min-width: 150px;
     background-color: #ffffff;
     margin: -25px 30px 10px;
-    border-radius: 3px;
+    border-radius: 6px;
     box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -82,7 +82,7 @@ body {
     color: #ffffff;
     margin: 5px 5px 5px;
     border: none;
-    border-radius: 2px;
+    border-radius: 6px;
     cursor: pointer;
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.1);
     transition: box-shadow 0.6s, transform 0.5s; 
@@ -118,8 +118,8 @@ img{
 }
 .imgBar{
     object-fit: cover;
-    border-radius: 3px;
-    width: 17%;
+    border-radius: 8px;
+    width: 15%;
     height: auto;
     min-width: 10%;
     max-width: 35%;
@@ -127,12 +127,19 @@ img{
     display: inline-block;
     flex-direction: row;
     justify-content: left;
-    /* float: left; */
+}
+.h2Bar{
+    width:20%;
+}
+.pBar{
+    width:20%;
 }
 .aBar{
-    display: inline-block;
-    flex-direction: row;
-    justify-content: right;
+    width: 20%;
+    /* flex-direction: row;
+    justify-content: right; */
+    display: flex;
+    justify-content: flex-end;
 }
 .recipeItem{
     margin: 10px 10px 10px;
@@ -145,7 +152,9 @@ img{
 .recipeItemBar{
     margin: 10px 10px 10px;
     width: 100%;
-
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid grey;
 }
 .blockInline{
     display: inline-block;
