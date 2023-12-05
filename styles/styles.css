@@ -119,8 +119,9 @@ img{
 .imgBar{
     object-fit: cover;
     border-radius: 3px;
-    width: 25%;
+    width: 17%;
     height: auto;
+    min-width: 10%;
     max-width: 35%;
     max-height: auto;
     display: inline-block;
