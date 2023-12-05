@@ -33,6 +33,25 @@ body {
     height: 80px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
+.video-js .vjs-tech {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.wave-decoration {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    pointer-events: none;
+    width: 2000px;
+    left: 50%;
+    margin: 0 0 0 -1000px;
+}
+/* .wave-decoration.is-bottom {
+ 
+} */
 .search{
     width: 30%;
 }
@@ -41,7 +60,7 @@ body {
     min-width: 150px;
     background-color: #ffffff;
     margin: -25px 30px 10px;
-    border-radius: 3px;
+    border-radius: 6px;
     box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -63,7 +82,7 @@ body {
     color: #ffffff;
     margin: 5px 5px 5px;
     border: none;
-    border-radius: 2px;
+    border-radius: 6px;
     cursor: pointer;
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.1);
     transition: box-shadow 0.6s, transform 0.5s; 
@@ -97,7 +116,31 @@ img{
     flex-direction: row;
     justify-content: center;
 }
-
+.imgBar{
+    object-fit: cover;
+    border-radius: 8px;
+    width: 15%;
+    height: auto;
+    min-width: 10%;
+    max-width: 35%;
+    max-height: auto;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: left;
+}
+.h2Bar{
+    width:20%;
+}
+.pBar{
+    width:20%;
+}
+.aBar{
+    width: 20%;
+    /* flex-direction: row;
+    justify-content: right; */
+    display: flex;
+    justify-content: flex-end;
+}
 .recipeItem{
     margin: 10px 10px 10px;
     /* background-color: lightslategrey; */
@@ -106,7 +149,26 @@ img{
     padding: 4%;
     max-width: 90%;
 }
-
+.recipeItemBar{
+    margin: 10px 10px 10px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.blockInline{
+    display: inline-block;
+}
+.menu-icon{
+    width: 0.9rem;
+    height: 0.45rem;
+    border-top: 0.1rem solid #520c30;
+    border-bottom:0.1rem solid #520c30;
+    background-color: #520c30;
+    padding: 0.1rem 0;
+    margin-top:0.9rem;
+    background-clip:content-box;
+ }
 .viewButton{
     text-decoration: none;
     text-align: center;
@@ -123,6 +185,8 @@ img{
 footer{
     width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 0;
 }
 .footer-wave .st0 .st1{
     width:auto;

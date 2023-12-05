@@ -1,6 +1,6 @@
 //These imports are for running it locally
-//import {API_ID} from './config.js'
-//import {API_KEY} from './config.js'
+// import {API_ID} from './config.js'
+// import {API_KEY} from './config.js'
 var query = "";
 
 $(document).ready(function () {
@@ -9,6 +9,26 @@ $(document).ready(function () {
       query = document.getElementById('foodInput').value;
       //Where we are going to parse the api information
       await fetchAPI()
+  });
+  var status="boxStatus";
+  $(document).on("click",".menu-icon",function(){
+      if(status=="boxStatus"){
+        status=="barStatus";
+        $(".box").find("hr").remove();
+      }
+      else{
+        status=="boxStatus";
+        $(".box").find("div").after($("<hr>"));
+      } 
+
+      $(".box").toggleClass("recipeItem col-md-3 mx-5 recipeItemBar");
+      $(".box").children().each(function(){
+        $(this).toggleClass("blockInline");
+      });
+      $(".box").find("img").toggleClass("imgBar");
+      $(".box").find("#h2").toggleClass("h2Bar");
+      $(".box").find("#p").toggleClass("pBar");
+      $(".box").find("#a").toggleClass("aBar");
   });
 });
 
@@ -31,21 +51,61 @@ function populateContainer(results) {
   results.map((result) => {
     calculateScore(result)
     recipeItem += `
-    <div class="recipeItem col-md-3 mx-5">
+    <div class="recipeItem col-md-3 mx-5 box">
         <img src="${result.recipe.image}" alt="">
-        <div class="flex-container">
+        <div class="flex-container" id="h2">
             <h2 class="title">${result.recipe.label}</h2>
-            <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
         </div>
-        <p class="Item-data p-1">
-            calories: ${result.recipe.calories.toFixed(0)} <br>
-            score: ${calculateScore(result).toFixed(0)}
-        </p>
+        <hr>
+        <div id="p">
+          <p class="Item-data p-1">
+              calories: ${result.recipe.calories.toFixed(0)} <br>
+              score: ${calculateScore(result).toFixed(0)}
+          </p>
+        </div>
+        <div id="a">
+          <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
+        </div>
     </div>`;
   });
 
   $(".api-container").html(recipeItem);
 }
+
+// async function fetchAPI2() {
+//   //Calling into the db to grab the information
+//   var results = await getData()
+//   //Get the ID from the db
+//   var API_ID = results.results[0].id
+//   //Get the key from the db
+//   var API_KEY = results.results[0].key
+  
+//   let apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${API_ID}&app_key=${API_KEY}&to=20`;
+//   const response = await fetch(apiUrl);
+//   const data = await response.json();
+//   populateContainer2(data.hits);
+// }
+
+// function populateContainer2(results) {
+//   let recipeItem = "";
+//   results.map((result) => {
+//     calculateScore(result)
+//     recipeItem += `
+//     <div class="recipeItem col-md-3 mx-5" id="box">
+//         <img src="${result.recipe.image}" alt="">
+//         <div class="flex-container">
+//             <h2 class="title">${result.recipe.label}</h2>
+//             <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
+//         </div>
+//         <p class="Item-data p-1">
+//             calories: ${result.recipe.calories.toFixed(0)} <br>
+//             score: ${calculateScore(result).toFixed(0)}
+//         </p>
+//     </div>`;
+//   });
+
+//   $(".api-container").html(recipeItem);
+// }
 
 function calculateScore(result){
   let carbs = result.recipe.totalNutrients.CHOCDF.quantity
