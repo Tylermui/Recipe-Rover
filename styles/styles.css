@@ -33,6 +33,26 @@ body {
     height: 80px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
+.video-js .vjs-tech {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.wave-decoration {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    pointer-events: none;
+    width: 2000px;
+    left: 50%;
+    margin: 0 0 0 -1000px;
+}
+.wave-decoration.is-bottom {
+    top: auto;
+    bottom: 0;
+}
 .search{
     width: 30%;
 }
