@@ -143,6 +143,7 @@ img{
 footer{
     width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    bottom: 0;
 }
 .footer-wave .st0 .st1{
     width:auto;
