@@ -15,6 +15,7 @@ $(document).ready(function () {
       $(".box").children().each(function(){
         $(this).toggleClass("blockInline");
       });
+      $(".box").find("img").toggleClass("imgBar");
   });
 });
 

@@ -116,6 +116,18 @@ img{
     flex-direction: row;
     justify-content: center;
 }
+.imgBar{
+    object-fit: cover;
+    border-radius: 10px;
+    width: 10%;
+    height: auto;
+    max-width: 20%;
+    max-height: 20%;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: left;
+    float: left;
+}
 
 .recipeItem{
     margin: 10px 10px 10px;
