@@ -3,13 +3,27 @@
 // import {API_KEY} from './config.js'
 var query = "";
 
+async function performSearch() {
+  // Grabbing the query from the user
+  query = $('#foodInput').val();
+  // Where we are going to parse the API information
+  await fetchAPI();
+}
+
 $(document).ready(function () {
   $('#searchButton').click(async function() {
-      //Grabbing the query from the user
-      query = document.getElementById('foodInput').value;
-      //Where we are going to parse the api information
-      await fetchAPI()
+      await performSearch();
+
   });
+  $('#foodInput').keypress(function(event) {
+    // Check if the pressed key is Enter (key code 13)
+    if (event.which === 13) {
+      // Call the search function when Enter is pressed
+      performSearch();
+    }
+  });
+
+  //change view of recipes
   var status="boxStatus";
   $(document).on("click",".menu-icon",function(){
       if(status=="boxStatus"){

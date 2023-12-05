@@ -8,12 +8,8 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f7f7f7;
-    /* font-family: Century Gothic; */
+    position: relative;
     font-family: Yanone Kaffeesatz;
-    /* font-family: Jotia,Verdana,Geneva,sans-serif; */
-    /* font-family: var(--jotia); */
-    /* font-family: Jotia; */
-    /* font-size: 20px; */
     font-size: clamp(0.7rem, 0.489rem + 1.05vw, 1.2rem);
     font-weight: bold;
     color: #5c0931;
@@ -23,22 +19,13 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 0px;
-    /* background-color: #8E2157; */
     background: linear-gradient(to bottom,#520c30, #7e184e 100%);
-    /* background-color: #5C0391; */
     color: whitesmoke;
     text-align: left;
     padding-left: 20px;
     width: 100%;
     height: 80px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-}
-.video-js .vjs-tech {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
 }
 .wave-decoration {
     position: absolute;
@@ -49,14 +36,10 @@ body {
     left: 50%;
     margin: 0 0 0 -1000px;
 }
-/* .wave-decoration.is-bottom {
- 
-} */
 .search{
     width: 30%;
 }
 .search-container {
-    /* width: auto; */
     min-width: 150px;
     background-color: #ffffff;
     margin: -25px 30px 10px;
@@ -97,9 +80,6 @@ body {
     margin-top: 0px;
     width: 100%;
     padding: 20px;
-    /* background-color: #ffffff; */
-    /* border-radius: 8px; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -119,6 +99,7 @@ img{
 .imgBar{
     object-fit: cover;
     border-radius: 8px;
+    margin: .75rem;
     width: 15%;
     height: auto;
     min-width: 10%;
@@ -136,14 +117,11 @@ img{
 }
 .aBar{
     width: 20%;
-    /* flex-direction: row;
-    justify-content: right; */
     display: flex;
     justify-content: flex-end;
 }
 .recipeItem{
     margin: 10px 10px 10px;
-    /* background-color: lightslategrey; */
     background-color: #ffffff;
     border-radius: 10px;
     padding: 4%;
@@ -160,14 +138,14 @@ img{
     display: inline-block;
 }
 .menu-icon{
-    width: 0.9rem;
-    height: 0.45rem;
-    border-top: 0.1rem solid #520c30;
-    border-bottom:0.1rem solid #520c30;
+    border-top: solid #520c30;
+    border-bottom:solid #520c30;
     background-color: #520c30;
     padding: 0.1rem 0;
     margin-top:0.9rem;
+    padding: 0px;
     background-clip:content-box;
+    color: white;
  }
 .viewButton{
     text-decoration: none;
