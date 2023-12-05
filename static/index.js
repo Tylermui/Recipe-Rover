@@ -14,15 +14,11 @@ $(document).ready(function () {
   $(document).on("click",".menu-icon",function(){
       if(status=="boxStatus"){
         status=="barStatus";
-        // $aNode=$(".box").find("div").find("a").html();
-        $(".box").append($(".box").find("div").find("a"));
-        $(".box").find("div").find("a").remove();
+        $(".box").find("hr").remove();
       }
       else{
         status=="boxStatus";
-        $aNode=$(".box").find("a").removeClass("blockInline");
-        $(".box").find("div").append($aNode);
-        $(".box").find("a").remove();
+        $(".box").find("div").after($("<hr>"));
       } 
 
       $(".box").toggleClass("recipeItem col-md-3 mx-5 recipeItemBar");
@@ -57,12 +53,13 @@ function populateContainer(results) {
         <img src="${result.recipe.image}" alt="">
         <div class="flex-container">
             <h2 class="title">${result.recipe.label}</h2>
-            <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
         </div>
+        <hr>
         <p class="Item-data p-1">
             calories: ${result.recipe.calories.toFixed(0)} <br>
             score: ${calculateScore(result).toFixed(0)}
         </p>
+        <a href="${result.recipe.url}" class="viewButton">View Recipe</a>
     </div>`;
   });
 
