@@ -2,7 +2,7 @@
 Welcome to Recipe Rover, the culminating project for CS362 Computer Organization and Architecture. This application serves as a user-friendly landing site where individuals can input their ingredients or cooking times and receive personalized recipes tailored to their preferences.
 
 ## How Recipe Rover Works
-Recipe Rover is currently deployed on Cloudflare Pages with a D1 database that stores the API Key and API ID. Doing this allows them to stay hidden from the user. When a user queries and submits, a GET request is sent to the database that fetches the ID and Key. It then proceeds to read the API call and populate the container the the user to view.
+Recipe Rover is currently deployed on Cloudflare Pages with a D1 database that stores the API Key and API ID. Doing this allows them to stay hidden from the user. When a user queries and submits, a GET request is sent to the database that fetches the ID and Key. It then proceeds to read the API call and populate the container the the user to view. The API being used is the Edamam Recipe Search API.
 
 ## Getting Started Locally
 To ensure smooth functioning of this project, follow these steps to set up your environment:
