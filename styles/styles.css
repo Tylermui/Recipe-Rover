@@ -61,19 +61,19 @@ body {
 .search-button {
     height: auto;
     width: auto;
-    background-color: #FFA903;
+    background: linear-gradient(133.69deg,#dfb757, #b4801e);
     color: #ffffff;
-    margin: 5px 5px 5px;
+    margin: 3.5px 3.5px 3.5px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.1);
-    transition: box-shadow 0.6s, transform 0.5s; 
+    transition: box-shadow 0.2s, transform 0.2s; 
 }
 .search-button:hover{
     background-color: #45a049;
-    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.3);
-    transition: box-shadow 0.5s;
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.3);
+    transition: box-shadow 0.2s;
 }
 
 .api-container {
@@ -138,15 +138,23 @@ img{
     display: inline-block;
 }
 .menu-icon{
-    border-top: solid #520c30;
-    border-bottom:solid #520c30;
     background-color: #520c30;
-    padding: 0.1rem 0;
-    margin-top:0.9rem;
-    padding: 0px;
-    background-clip:content-box;
     color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px 5px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(133.69deg,#7c3265,#38002e);
+    cursor: pointer;
+    box-shadow: 0px 0px 1px 0.2px rgba(0,0,0,0.1);
+    transition: box-shadow 0.2s, transform 0.2s; 
  }
+ .menu-icon:hover{
+    background-color: #45a049;
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.5);
+    transition: box-shadow 0.2s;
+}
 .viewButton{
     text-decoration: none;
     text-align: center;
@@ -163,8 +171,7 @@ img{
 footer{
     width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    bottom: 0;
+    margin-top: auto;
 }
 .footer-wave .st0 .st1{
     width:auto;
